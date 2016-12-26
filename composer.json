@@ -1,0 +1,18 @@
+{
+	"name": "MYMVC PHP",
+	"description":"PHP Framework",
+	"type":"Framework",
+	"keywords":[
+		"PHP","PHP Framework"
+	],
+	"require":{
+		"php":">=5.3.0",
+		"filp/whoops":"*"
+	},
+	"repositories": {
+		"packagist": {
+			"type": "composer",
+			"url": "https://packagist.phpcomposer.com"
+		}
+	}
+}
