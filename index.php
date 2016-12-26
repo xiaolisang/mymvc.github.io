@@ -35,7 +35,6 @@ if (DEBUG) {
 	ini_set('display_error', 'Off');
 }
 
-dffgdfgfdg();
 
 //引入公共文件
 include CORE."/common/function.php";
