@@ -15,7 +15,6 @@ class mymvc
 		//初始化日志存储方式
 		\core\lib\log::init();
 
-
 		//实例化路由类
 		$route=new \core\lib\route();
 
@@ -37,7 +36,6 @@ class mymvc
 		}else{
 			throw new \Exception('找不到控制器'.$control);
 		}
-
 
 	}
 
@@ -61,21 +59,24 @@ class mymvc
 
 	}
 
-	//视图层传参方法
-	public function assign($key,$value)
-	{
-		$this->assign[$key]=$value;
-	}
+	// //视图层传参方法
+	// public function assign($key,$value)
+	// {
+	// 	$this->assign[$key]=$value;
+	// }
 
 	//视图层显示方法
-	public function display($files)
+	public function view()
 	{
-		$file=APP."/views/".$files;
-		if (is_file($file)) {
-			//将数组打散输出值
-			extract($this->assign);
-			include $file;
-		}
+		//实例化模板引擎
+		\Twig_Autoloader::register();
+
+		$loader = new \Twig_Loader_Filesystem(APP."/views");
+		$twig = new \Twig_Environment($loader, array(
+		    'cache' => ROOT.'/log/twig',
+		    'debug'=>DEBUG
+		));
+		return $twig;
 	}
 }
 

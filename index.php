@@ -21,7 +21,7 @@ define('MODULE', "app");
 //是否开启调试模式
 define('DEBUG',true);
 
-//引入PHP 报错包
+//引入自动加载类
 include "vendor/autoload.php";
 
 if (DEBUG) {
