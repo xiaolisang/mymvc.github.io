@@ -5,6 +5,7 @@
   <title></title> 
 </head>
 <body>
+	<script src="../../jquery-1.9.1.min.js"></script>
 
 {% block content %}
 

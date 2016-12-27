@@ -15,9 +15,9 @@ class route
 	{
 		//获取路由信息
 		$route=config::all('route');
-
+		//p($_SERVER['PATH_INFO']);die;
 		//获取url参数，获取控制器、方法
-		if (isset($_SERVER['PATH_INFO'])&&$_SERVER['PATH_INFO']!="/") {
+		if (!empty($_SERVER['PATH_INFO'])&&$_SERVER['PATH_INFO']!="/") {
 			//获取url控制器、方法
 			$path=$_SERVER['PATH_INFO'];
 			$patharr=explode("/",trim($path,"/"));

@@ -3,7 +3,7 @@ namespace app\controllers;
 use core\lib\model;
 use core\mymvc;
 
-class IndexController extends mymvc
+class indexController extends mymvc
 {
 	public function index(){
 		$data="It is work!";

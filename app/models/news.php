@@ -36,7 +36,7 @@ class news extends model
 	}	
 
 	//修改一条数据
-	public function save($data){
+	public function save($data,$id){
 		$res=$this->update($this->table, $data, ['id'=>$id]);
 		return $res;
 	}

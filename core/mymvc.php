@@ -24,6 +24,7 @@ class mymvc
 		//拼接控制器文件目录
 		$controlfile=APP."/controllers/".$control."Controller.php";
 
+		//p($route);die;
 		//拼接控制器路径
 		$controlpath="\\".MODULE."\controllers\\".$control."Controller";
 		if (is_file($controlfile)) {
